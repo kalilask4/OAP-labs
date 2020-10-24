@@ -31,9 +31,9 @@ void input_output() {
 }
 
 
-int main() {
+//int main() {
 	
-	input_output();
-	_getch();
-	return 0;
-}
+	//input_output();
+	//_getch();
+	//return 0;
+//}
