@@ -37,13 +37,16 @@ using namespace std;
 void task_1();
 void task_2();
 void task_3();
+void task_4();
+
 
 
 int main(void) {
 	
 	//task_1();
 	//task_2();
-	task_3();
+	//task_3();
+	task_4();
 	
 	return 0;
 }
@@ -86,5 +89,40 @@ void task_3() {
 	y = 2. / 3 * (pow(sin(x), 2)) - 3. / 4 * (pow(cos(x), 2));
 	cout << "x = " << x << endl;
 	cout << "y = " << y << endl;
+}
+
+void task_4() {
+	setlocale(LC_CTYPE, "Russian");
+	double x, y, z, max1, max2, s, min1;
+	bool repeat = true;
+	while (repeat)
+	{
+	m1:
+		cout << "Введите 3 числа: x, y, z " << endl;
+		cin >> x >> y >> z;
+		if (x == y or x == z or y == z) {
+			cout << "Введите корректные данные. Не должно выполняться ни одно равенство: x=y, x=z, z=y" << endl;
+			goto m1;
+		}
+		else
+			max1 = y > z ? y : z;
+		if (max1 == 0) {
+			if (y > z) {
+				cout << "Если y>z, то y не должен быть равен 0" << endl;
+			}
+			if (z > y) {
+				cout << "Если z>y, то z не должен быть равен 0" << endl;
+			}
+			goto m1;
+		}
+		else {
+			max2 = x > y ? x : y;
+			min1 = max2 < max1 ? max2 : max1;
+			s = min1 / max1;
+			cout << "Результат = " << s << endl;
+		}
+		cout << "Повторить? (1-да, 0-нет)" << endl;
+		cin >> repeat;
+	}
 }
 
