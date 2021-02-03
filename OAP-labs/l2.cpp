@@ -6,12 +6,14 @@ using namespace std;
 
 void task_1();
 void task_2();
+void task_3();
 
 
 int main(void) {
 	
 	//task_1();
-	task_2();
+	//task_2();
+	task_3();
 	
 	return 0;
 }
@@ -35,5 +37,24 @@ void task_2() {
 	cin >> x >> y >> z;
 	answer = pow(10 * (pow(x, 1. / 3) + pow(x, y + 2)), 1. / 2) * (pow(asin(z), 2) - fabs(x - y));
 	cout << "Результат = " << answer << endl;
+}
+
+void task_3() {
+	setlocale(LC_CTYPE, "Russian");
+	double x, y, z;
+	cout << "Введите z " << endl;
+	cin >> z;
+	if (z < 0) {
+		x = z;
+		cout << "Результат при z<0: " << endl; // << x << y << endl;
+	}
+	else {
+		x = sin(z);
+
+		cout << "Результат при z>0: " << endl; //<< x << y << endl;
+	}
+	y = 2. / 3 * (pow(sin(x), 2)) - 3. / 4 * (pow(cos(x), 2));
+	cout << "x = " << x << endl;
+	cout << "y = " << y << endl;
 }
 
