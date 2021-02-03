@@ -1,15 +1,17 @@
 #include <math.h>
 #include <iostream>
-#include<stdlib.h>
+#include <stdlib.h>
 
 using namespace std;
 
 void task_1();
+void task_2();
 
 
 int main(void) {
 	
-	task_1();
+	//task_1();
+	task_2();
 	
 	return 0;
 }
@@ -24,3 +26,14 @@ void task_1() {
 	cout << " z1 = " << z1 << endl;
 	cout << " z2 = " << z2 << endl;
 }
+
+
+void task_2() {
+	setlocale(LC_CTYPE, "Russian");
+	double answer, x, y, z;
+	cout << "¬ведите через \"пробел\" 3 числа" << endl;
+	cin >> x >> y >> z;
+	answer = pow(10 * (pow(x, 1. / 3) + pow(x, y + 2)), 1. / 2) * (pow(asin(z), 2) - fabs(x - y));
+	cout << "–езультат = " << answer << endl;
+}
+
