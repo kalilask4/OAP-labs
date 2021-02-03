@@ -38,6 +38,7 @@ void task_1();
 void task_2();
 void task_3();
 void task_4();
+void task_5();
 
 
 
@@ -46,7 +47,8 @@ int main(void) {
 	//task_1();
 	//task_2();
 	//task_3();
-	task_4();
+	//task_4();
+	task_5();
 	
 	return 0;
 }
@@ -126,3 +128,37 @@ void task_4() {
 	}
 }
 
+	void task_5() {
+		setlocale(LC_CTYPE, "Russian");
+		double t2, n1, n2, e;
+		bool repeat = true;
+		const double Pi = 3.1415926;
+
+		while (repeat)
+		{
+			cout << "Введите n1:";
+			cin >> n1;
+			cout << "Введите n2:";
+			cin >> n2;
+			cout << "Введите e:";
+			cin >> e;
+
+			if ((n1 + n2) < (Pi)) {
+				cout << "n1+n2 не входит в заданные промежутки, введите корректные данные." << endl;
+				//continue;
+			}
+			else if (((n1 + n2) >= Pi) && ((n1 + n2) < 5)) {
+				t2 = pow(sin(Pi * n1 + pow(e, n2)), 2);
+				cout << "n1+n2 входит в промежуток [Pi, 5), следовательно используем первое уравнение. " << endl;
+				cout << "t2=" << t2 << endl;
+			}
+			else {
+
+				t2 = pow(sin(Pi * n2 + n1), 2);
+				cout << "n1+n2 входит в промежуток [5, \"бесконечность\"), следовательно используем второе уравнение. " << endl;
+				cout << "t2=" << t2 << endl;
+			}
+			cout << "Повторить? (1-да, 0-нет)" << endl;
+			cin >> repeat;
+		}
+	}
