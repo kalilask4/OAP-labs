@@ -99,14 +99,20 @@ int main() {
 
 
 int get_array_lenght() {
-	int array_lenght =2;
+	int array_lenght;
+	do {
+		printf_s("¬ведите размер массива: ");
+		scanf_s("%i", &array_lenght);
+		if (array_lenght <= 0)  printf_s("\n¬ведите длину массива >0 \n\n");
+	} while (array_lenght <= 0);
 	return array_lenght;
 }
 
 void create_array(int* array, int array_lenght) {
 	int i;
-	for (i = 2; i < array_lenght; i++) {
-		array + i;
+	for (int i = 0; i < array_lenght; i++) {
+		printf_s("¬ведите значение элемента [%i] = ", i);
+		scanf_s("%i", array + i);
 	}
 
 	printf_s("\n");
@@ -114,8 +120,8 @@ void create_array(int* array, int array_lenght) {
 
 
 int* find_min_element(int* array, int lenght) {
-	int i, idx = 0, min = *array;
-	for (i = 1; i < lenght; i++) {
+	int idx = 0, min = *array;
+	for (int i = 1; i < lenght; i++) {
 		if (min > *(array + i)) {
 			min = *(array + i);
 			idx = i;
@@ -124,7 +130,6 @@ int* find_min_element(int* array, int lenght) {
 	int* result = (int*)calloc(2, sizeof(int));
 	*result = min;
 	*(result + 1) = idx;
-
 	return result;
 }
 
