@@ -23,7 +23,7 @@
 ********************************************************************************/
 #include <locale>
 
-int* find_min_element(int* array, int array_lenght);
+int* find_min_element(int* array, int array_lenght); // Принимает указатель на одномерный массив, выводит указатель на массив с минимальным значение и его индексом
 int get_array_lenght();
 void create_array(int* array, int array_lenght);
 
@@ -34,10 +34,10 @@ int main() {
 	array1_lenght = get_array_lenght();
 	array2_lenght = get_array_lenght();
 
-	int* array1 = (int*)calloc(array1_lenght, sizeof(int));
+	int* array1 = (int*)calloc(array1_lenght, sizeof(int));  // Выделение блока памяти для массива
 	int* array2 = (int*)calloc(array2_lenght, sizeof(int));
 
-	if (!array1 || !array2) {				
+	if (!array1 || !array2) {				             // Проверка памяти
 		printf_s("\nНедостаточно памяти! Нажмите любую клавишу\n\n");
 
 		return(2);
@@ -49,6 +49,7 @@ int main() {
 	int* min_elemrnt_array1 = find_min_element(array1, array1_lenght);
 	int* min_element_array2 = find_min_element(array2, array2_lenght);
 
+	// Определение очередности вывода массива и проверка на совпадение минимальных значений
 	int* fst_print;
 	int* snd_print;
 	int fst_size, snd_size, min_val, idx;
