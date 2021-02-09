@@ -39,6 +39,7 @@ int main() {
 
 	if (!array1 || !array2) {				
 		printf_s("\nНедостаточно памяти! Нажмите любую клавишу\n\n");
+
 		return(2);
 	}
 
@@ -97,7 +98,6 @@ int main() {
 }
 
 
-
 int get_array_lenght() {
 	int array_lenght;
 	do {
@@ -105,8 +105,10 @@ int get_array_lenght() {
 		scanf_s("%i", &array_lenght);
 		if (array_lenght <= 0)  printf_s("\nВведите длину массива >0 \n\n");
 	} while (array_lenght <= 0);
+
 	return array_lenght;
 }
+
 
 void create_array(int* array, int array_lenght) {
 	int i;
@@ -114,7 +116,6 @@ void create_array(int* array, int array_lenght) {
 		printf_s("Введите значение элемента [%i] = ", i);
 		scanf_s("%i", array + i);
 	}
-
 	printf_s("\n");
 }
 
@@ -130,6 +131,7 @@ int* find_min_element(int* array, int lenght) {
 	int* result = (int*)calloc(2, sizeof(int));
 	*result = min;
 	*(result + 1) = idx;
+
 	return result;
 }
 
