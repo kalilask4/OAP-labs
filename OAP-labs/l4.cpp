@@ -1,11 +1,38 @@
+/********************************************************************************
+*                                                                               *
+*   L_4.																		*
+*																				*
+*  Тема:  Циклические процессы с использованием одномерных массивов 			*
+*  и функций пользователя. Связь массивов с указателями. Сортировка				*
+*  																				*
+*  Цель работы: Изучить правила работы с одномерными массивами, 				*
+*  связь массивов с указателями.												*
+*  																				*
+*  ЗАДАНИЕ 1:																	*
+*  Написать пользовательскую функцию, решающую указанную ниже задачу. 			*
+*  Массивы А и В динамические, выделение памяти выполнить функциями calloc() 	*
+*  или malloc(), обращение к элементам массива только через указатель.			*
+*  Предусмотреть реакцию программы на ситуации, при которых задача 				*
+*  не имеет решения.															*
+*  																				*
+*  Вариант 6. 																	*
+*  Заданы два массива А(N) и В(M). Первым на печать вывести массив, 			*
+*  содержащий наименьшее значение. Напечатать также это значение и его			*
+*  порядковый номер.															*
+*                                                                               *
+********************************************************************************/
 #include <locale>
 
 int* find_min_element(int* array, int array_lenght);
+int get_array_lenght();
 void create_array(int* array, int array_lenght);
 
 int main() {
 	setlocale(LC_CTYPE, "Russian");
-	int array1_lenght = 2, array2_lenght = 3;
+	int array1_lenght, array2_lenght;
+
+	array1_lenght = get_array_lenght();
+	array2_lenght = get_array_lenght();
 
 	int* array1 = (int*)calloc(array1_lenght, sizeof(int));
 	int* array2 = (int*)calloc(array2_lenght, sizeof(int));
@@ -69,6 +96,12 @@ int main() {
 	return 0;
 }
 
+
+
+int get_array_lenght() {
+	int array_lenght =2;
+	return array_lenght;
+}
 
 void create_array(int* array, int array_lenght) {
 	int i;
