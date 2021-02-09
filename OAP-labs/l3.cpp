@@ -18,7 +18,7 @@
 ********************************************************************************/
 #include <locale>
 
-int main() {
+/*int main() {
 	setlocale(LC_CTYPE, "Russian");
 	int k, n, factorial, count;
 	double a, b, h, x;
@@ -59,3 +59,4 @@ int main() {
 
 	return 0;
 }
+*/
