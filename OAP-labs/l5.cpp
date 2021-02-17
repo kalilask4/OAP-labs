@@ -7,6 +7,7 @@ int rows, cols;
 
 void array_input(int** arr, int rows, int cols);
 void out_array(int** arr, int rows, int cols);
+int sum_first_row(int** arr);
 
 int main() {
 	setlocale(LC_CTYPE, "RUSSIAN");
@@ -26,9 +27,12 @@ int main() {
 	}
 	cout << "¬вод массива:" << endl;
 	array_input(arr, rows, cols);
+
 	out_array(arr, rows, cols);
 
-
+	int sum = 0;
+	sum = sum_first_row(arr);
+	cout << "—умма первой строки:  " << sum << endl;
 
 	return 0;
 }
@@ -52,4 +56,14 @@ void out_array(int** arr, int rows, int cols) {
 		}
 		cout << endl;
 	}
+}
+
+
+int sum_first_row(int** arr) {
+	int sum = 0;
+	for (int j = 0; j < cols; j++) {
+		sum += arr[0][j];
+		cout << sum;
+	}
+	return sum;
 }
