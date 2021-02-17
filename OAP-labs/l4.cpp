@@ -21,7 +21,7 @@
 *  порядковый номер.															*
 *                                                                               *
 ********************************************************************************/
-#include <locale>
+/*#include <locale>
 
 int* find_min_element(int* array, int array_lenght); // Принимает указатель на одномерный массив, выводит указатель на массив с минимальным значение и его индексом
 int get_array_lenght();
@@ -135,4 +135,5 @@ int* find_min_element(int* array, int lenght) {
 
 	return result;
 }
+*/
 

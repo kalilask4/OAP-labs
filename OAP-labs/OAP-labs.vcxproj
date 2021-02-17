@@ -22,6 +22,7 @@
     <ClCompile Include="l2.cpp" />
     <ClCompile Include="l3.cpp" />
     <ClCompile Include="l4.cpp" />
+    <ClCompile Include="l5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ToDo.txt" />
