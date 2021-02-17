@@ -5,7 +5,7 @@ using namespace std;
 
 int rows, cols;
 
-void enter_array(int** arr, int rows, int cols);
+void array_input(int** arr, int rows, int cols);
 
 int main() {
 	setlocale(LC_CTYPE, "RUSSIAN");
@@ -24,11 +24,11 @@ int main() {
 		arr[i] = new int[cols];
 	}
 	cout << "¬вод массива:" << endl;
-	enter_array(arr, rows, cols);
+	array_input(arr, rows, cols);
 	return 0;
 }
 
-void enter_array(int** arr, int rows, int cols) {
+void array_input(int** arr, int rows, int cols) {
 	for (int i = 0; i < rows; i++) {
 		cout << "¬ведите строку номер:" << "  " << i + 1 << endl;
 		for (int j = 0; j < cols; j++)
