@@ -34,6 +34,12 @@ int main() {
 	sum = sum_first_row(arr);
 	cout << "Сумма первой строки:  " << sum << endl;
 
+	for (int i = 0; i < rows; i++)
+	{
+		delete[] arr[i];
+	}
+	delete[]arr;
+
 	return 0;
 }
 
