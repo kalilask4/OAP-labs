@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="l2.cpp" />
+    <ClCompile Include="l3-2.cpp" />
     <ClCompile Include="l3.cpp" />
     <ClCompile Include="l4.cpp" />
     <ClCompile Include="l5.cpp" />
